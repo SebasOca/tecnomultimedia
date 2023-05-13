@@ -9,6 +9,8 @@ int vel = 2;
 int posY;
 int posX;
 int postext = 1000;
+int tiempo;
+
 
 void setup() {
   size (640, 480);
@@ -18,7 +20,7 @@ void setup() {
 
   posX = 30;
   posY = 480;
-
+  tiempo = second();
 
   gen1 = loadImage ("clase tarantinos.jpg");
   gen2 = loadImage ("clase flota.jpg");
@@ -46,7 +48,7 @@ void draw() {
   } else if (pantalla == 1) {
 
     postext = frameCount*3;
-
+    tiempo=0;
     ellipse (592, 434, 56, 56);
     image (gen1, 0, 0, 640, 480);
     fill (255);
@@ -62,6 +64,8 @@ void draw() {
     text ("              Nuestro país contó con submarinos \ndesde 1933,  con tres unidades de la clase \nTarantinos construidos en Italia y habiendo \nconstruido su apostadero en la Base Naval \nMar del plata.", 30, 500-postext);
   
   } else if (pantalla == 2) {
+    postext = frameCount*3;
+    tiempo =6;
     image (gen2, 0, 0, 640, 480);
     fill (36, 169, 255);
     textSize (30);
@@ -70,6 +74,8 @@ void draw() {
     text ("participando en numerosas operaciones.", 861-postext*1.2, 310);
  
   } else if (pantalla == 3) {
+    postext = frameCount*3;
+    tiempo = 11;
     image (gen3, 0, 0, 640, 480);
     fill (36, 169, 255);
     textSize (30);
@@ -77,36 +83,43 @@ void draw() {
     text ("En el 71', estos fueron sucedidos por otros \ndos submarinos clase Guppy. Uno de ellos \nfue hundido por sus propios tripulantes en \n    la guerra en las Islas Georgias del Sur.", 40, 490-postext*1.2);
  
   } else if (pantalla == 4) {
+    postext = frameCount*3;
+    tiempo = 16;
     image (gen4, 0, 0, 640, 480);
     fill (36, 169, 255);
     textSize (0+postext*0.05);
     text ("Para ese entonces, Argentina ya contaba \n\ncon 2 de las primeras unidades de la clase \n\n209 del mundo y se apuntaba en la \n\nconstrucción de 2 submarinos TR1700", 40, 50);
   
   } else if (pantalla == 5) {
+    postext = frameCount*3;
+    tiempo = 22;
     ellipse (589, 44, 51, 51);
     image (gen5, 0, 0, 640, 480);
     fill (0, postext*0.5);
     textSize (30);
     textLeading (60);
     text ("    Desde la pérdida en 2017 del ARA San \nJuan, el país quedó sin unidades operativas \n  y va a paso lento en busca de la siguiente \n      generación de guardianes submarinos.", 35, 100);
-    fill (32, 161, 245, postext*2);
+    fill (32, 161, 245, postext*0.6);
     text ("    Desde la pérdida en 2017 del ARA San \nJuan, el país quedó sin unidades operativas \n  y va a paso lento en busca de la siguiente \n      generación de guardianes submarinos.", 35, 100);
   }
+  
+  if (tiempo > 0 && tiempo <=6){
+    pantalla = 1;
+  } else if (tiempo > 6 && tiempo <=11){
+      pantalla = 2;
+  }
+  
 }
 
 void mouseClicked() {
-  if (dist(mouseX, mouseY, 592, 434) < 27) {
+  if (dist(mouseX, mouseY, 592, 434) < 27 && pantalla ==0) {
     pantalla++;
-    
-  } else if (pantalla == 1) {
-    
-    
-  } else if (pantalla == 2) {
-  } else if (pantalla == 3) {
-  } else if (pantalla == 4) {
-  } else if (pantalla == 5) {
-      if (dist(mouseX, mouseY, 589, 44) < 26){
-        pantalla = 0;
-      }
+    if (pantalla ==1){
+    tiempo = 0;
+    }
+  }
+  
+  if (pantalla == 5 && dist(mouseX, mouseY, 589, 44) < 26){
+        pantalla = pantalla - 5;
   }
 }
