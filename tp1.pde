@@ -43,6 +43,7 @@ void draw() {
     textSize (55);
     text ("Submarinos\n        Argentinos", 200, 100);
     
+    tiempo = 0;
     
   } else if (pantalla == 1 ) {
     
@@ -72,8 +73,8 @@ void draw() {
     image (gen2, 0, 0, 640, 480);
     fill (36, 169, 255);
     textSize (30);
-    text ("Para 1960, fueron reemplazadas por", 1360-tiempo*4, 110);
-    text ("dos unidades de la clase Flota", 1420-tiempo*4, 210);
+    text ("Para 1960, fueron reemplazadas", 1360-tiempo*4, 110);
+    text ("por dos unidades de la clase Flota", 1420-tiempo*4, 210);
     text ("participando en numerosas operaciones.", 1480-tiempo*4, 310);
      
     tiempo++;
@@ -87,9 +88,9 @@ void draw() {
     
     fill (36, 169, 255);
     textSize (30);
-    textAlign(LEFT);
+    textAlign(CENTER);
     textLeading (80);
-    text ("En el 71', estos fueron sucedidos por otros \ndos submarinos clase Guppy. Uno de ellos \nfue hundido por sus propios tripulantes en \nla guerra en las Islas Georgias del Sur.", 40, 2100-tiempo*3.5);
+    text ("En el 71', estos fueron sucedidos por otros \ndos submarinos clase Guppy. Uno de ellos \nfue hundido por sus propios tripulantes en \nla guerra en las Islas Georgias del Sur.", 320, 2100-tiempo*3.5);
      
      tiempo++;
     if (tiempo>=650){
@@ -100,8 +101,9 @@ void draw() {
     
     image (gen4, 0, 0, 640, 480);
     fill (36, 169, 255);
-    textSize (0+tiempo);
-    text ("Para ese entonces, Argentina ya contaba \n\ncon 2 de las primeras unidades de la clase \n\n209 del mundo y se apuntaba en la \n\nconstrucción de 2 submarinos TR1700", 40, 50);
+    textSize (-160+tiempo/4);
+    textAlign(CENTER);
+    text ("Para ese entonces, Argentina ya contaba \n\ncon 2 de las primeras unidades de la clase \n\n209 del mundo y se apuntaba en la \n\nconstrucción de 2 submarinos TR1700", 320, 80);
     
     tiempo++;
     if (tiempo>=950){
@@ -113,13 +115,15 @@ void draw() {
     ellipse (589, 44, 51, 51);
     image (gen5, 0, 0, 640, 480);
     
-    fill (0, tiempo*0.5);
+    fill (0, 0+tiempo*0.2);
     textSize (30);
     textAlign(CENTER);
     textLeading (60);
-    text ("Desde la pérdida en 2017 del ARA San \nJuan, el país quedó sin unidades operativas \ny va a paso lento en busca de la siguiente \ngeneración de guardianes submarinos.", 35, 100);
-    fill (32, 161, 245, tiempo*0.6);
-    text ("Desde la pérdida en 2017 del ARA San \nJuan, el país quedó sin unidades operativas \ny va a paso lento en busca de la siguiente \ngeneración de guardianes submarinos.", 35, 100);
+    text ("Desde la pérdida en 2017 del ARA San \nJuan, el país quedó sin unidades operativas \ny va a paso lento en busca de la siguiente \ngeneración de guardianes submarinos.", 320, 100);
+    fill (32, 161, 245, 0+tiempo*0.2);
+    text ("Desde la pérdida en 2017 del ARA San \nJuan, el país quedó sin unidades operativas \ny va a paso lento en busca de la siguiente \ngeneración de guardianes submarinos.", 320, 100);
+    
+    tiempo++;
   }
   
 }
