@@ -1,15 +1,8 @@
 PFont fuente;
-
-PImage gen1, gen2, gen3, gen4, gen5;
+PImage portada, gen1, gen2, gen3, gen4, gen5;
 
 int pantalla = 0;
-int dirX = 1;
-int dirY = 1;
-int vel = 2;
-int posY;
-int posX;
 int postext = 1000;
-
 int tiempo = 0;
 
 
@@ -17,10 +10,8 @@ void setup() {
   size (640, 480);
   fuente = loadFont ("Nunito.vlw");
   textFont (fuente, 32);
-
-  posX = 30;
-  posY = 480;
   
+  portada = loadImage ("portada.jpg");
   gen1 = loadImage ("clase tarantinos.jpg");
   gen2 = loadImage ("clase flota.jpg");
   gen3 = loadImage ("clase guppy.jpg");
@@ -30,20 +21,19 @@ void setup() {
   frameRate (30);
 }
 
+
 void draw() {
 
   if (pantalla == 0) {
 
     ellipse (592, 434, 56, 56);
-    image (gen1, 0, 0, 640, 480);
+    image (portada, 0, 0, 640, 480);
     fill (255);
     textSize (55.5);
     text ("Submarinos\n        Argentinos", 200-1, 100);
     fill (15, 47, 219);
     textSize (55);
     text ("Submarinos\n        Argentinos", 200, 100);
-    
-    tiempo = 0;
     
   } else if (pantalla == 1 ) {
     
@@ -67,7 +57,6 @@ void draw() {
     if (tiempo>=240){
       pantalla++;
     }
-  
   } else if (pantalla == 2) {
     
     image (gen2, 0, 0, 640, 480);
@@ -81,7 +70,6 @@ void draw() {
     if (tiempo>=480){
       pantalla++;
     }
-    
   } else if (pantalla == 3) {
     
     image (gen3, 0, 0, 640, 480);
@@ -95,8 +83,7 @@ void draw() {
      tiempo++;
     if (tiempo>=650){
       pantalla++;
-    }
-     
+    } 
   } else if (pantalla == 4) {
     
     image (gen4, 0, 0, 640, 480);
@@ -109,7 +96,6 @@ void draw() {
     if (tiempo>=950){
       pantalla++;
     }
-    
   } else if (pantalla == 5) {
     
     ellipse (589, 44, 51, 51);
@@ -125,8 +111,8 @@ void draw() {
     
     tiempo++;
   }
-  
 }
+
 
 void mouseClicked() {
   if (dist(mouseX, mouseY, 592, 434) < 27 ) {
