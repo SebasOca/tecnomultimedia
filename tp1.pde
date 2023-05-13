@@ -97,11 +97,7 @@ void draw() {
 void mouseClicked() {
   if (dist(mouseX, mouseY, 592, 434) < 27) {
     pantalla++;
-    fill (255, 255, 255);
-    textSize (30);
-    textLeading (50);
-    text ("              Nuestro país contó con submarinos \ndesde 1933,  con tres unidades de la clase \nTarantinos construidos en Italia y habiendo \nconstruido su apostadero en la Base Naval \nMar del plata.", 30, 500-postext);
-  
+    
   } else if (pantalla == 1) {
     
     
