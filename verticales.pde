@@ -1,10 +1,13 @@
 void cuadrosVerticales() {
 
+  fill (52, 43, 7);
+  
   //sección vertical 1
   for (int i=0; i<8; i++) {
     for (int j=0; j<4; j++) {
       pushMatrix();
       translate(484, 7);
+      
       rect(15.4*i, 14.8*j, tamX, tamY);
       rect(0, 61, tamX, tamY);
       popMatrix();

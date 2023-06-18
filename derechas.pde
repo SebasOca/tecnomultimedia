@@ -1,5 +1,7 @@
 void diagDer() {
 
+  fill (227, 186, 23);
+  
   //sección dder 1
   for (int i=0; i<5; i++) {
     for (int j=0; j<5; j++) {
@@ -27,6 +29,7 @@ void diagDer() {
     for (int j=0; j<11; j++) {
       pushMatrix();
       translate(i*tamX*1.92, j*tamY*1.16);
+//      fill (227, 186, 23);
       rotate(radians(45));
       rect(586, -273, tamX, tamY);
       popMatrix();
