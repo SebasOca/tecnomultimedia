@@ -10,7 +10,7 @@ void botonera() {
   ellipse (300, 670, 750, 200);
 
   //botones iniciales
-  if (inicial == 0) {
+  if (inicial != 3 && inicial !=7 && inicial != 10 && inicial != 16) {
     textSize(71);
     text ("El Principito", 101, 150);
     fill (240);
@@ -23,11 +23,16 @@ void botonera() {
       popMatrix();
     }
     fill (43, 237, 200);
-    triangle(191, 554, 191, 524, 216, 538);
-    triangle(400, 556, 385, 527, 416, 527);
+    if (inicial == 0) {
+      triangle(191, 554, 191, 524, 216, 538);
+      triangle(400, 556, 385, 527, 416, 527);
+    } else if (inicial != 0 && inicial != 3 && inicial !=7 && inicial != 10 && inicial != 16) {
+      triangle(208, 554, 208, 524, 183, 538);
+      triangle(391, 554, 391, 524, 416, 538);
+    }
     
-  } else if (inicial != 0){
-    //botones historia
+  } else if (inicial == 3 || inicial ==7 || inicial == 10 || inicial == 16) {
+    //botones opcionales
     fill (240);
     ellipse (300, 533, 60, 60);
     for (int i=0; i<2; i++) {

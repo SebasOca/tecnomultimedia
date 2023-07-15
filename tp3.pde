@@ -12,7 +12,6 @@ void setup () {
     fondos[i] = loadImage("fondo" + I +".jpg");
   }
 
-
   parrafos = loadStrings("textos.txt");
 }
 
@@ -34,9 +33,17 @@ void keyPressed() {
 }
 
 void mouseClicked() {
-  if (inicial == 0) {
-    if (dist(mouseX, mouseY, 200, 539) < 30) {
+  //historias
+  if (dist(mouseX, mouseY, 200, 539) < 30) {
+    if (inicial == 18) {
+      inicial = 0;
+    } else {
       inicial++;
     }
+  }}
+  
+  //créditos
+  if (inicial == 0 && dist(mouseX, mouseY, 400, 539) < 30) {
+    inicial = 18;
   }
 }
