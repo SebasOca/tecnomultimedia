@@ -1,4 +1,4 @@
-// Enlace al video explicativo:
+// Enlace al video explicativo: https://youtu.be/dB2nhRInG7w
 
 PImage [] fondos = new PImage [19];
 int inicial = 0;
