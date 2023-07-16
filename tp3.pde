@@ -3,6 +3,7 @@
 PImage [] fondos = new PImage [19];
 int inicial = 0;
 String [] texto;
+String [] textoB;
 
 
 void setup () {
@@ -13,6 +14,7 @@ void setup () {
   }
   
   texto = loadStrings("textos.txt");
+  textoB = loadStrings("textosB.txt");
 }
 
 void draw () {
@@ -20,7 +22,7 @@ void draw () {
   image (fondos[inicial], 0, 0, 600, 600);
   botonera();
 
-  textSize(28);
+  textSize(24);
   textos();
 }
 

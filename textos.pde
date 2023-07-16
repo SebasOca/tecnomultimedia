@@ -3,7 +3,7 @@ void textos() {
 
   if (inicial==1) {
     for (int i = 0; i < 4; i++) {
-      text(texto[i], 70, i * 50 + 340);
+      text(texto[i], 70, i * 50 + 340 );
     }
   } else if (inicial==2) {
     for (int i = 4; i < 9; i++) {
@@ -57,9 +57,52 @@ void textos() {
       text(texto[i], 37, i * 50 - 2750);
     }
   } else if (inicial==7) {
+    fill(0);
+    for (int i = 0; i < 2; i++) {
+      text(textoB[i], 70, i * 50 +60);
+    }
+    for (int i = 2; i < 8; i++) {
+      text(textoB[i], 70, i * 50 +150);
+    }
+  } else if (inicial==8) {
     fill (0);
-    for (int i = 66; i < 74; i++) {
-      text(texto[i], 40, i * 50 /2- 3000);
+    for (int i = 8; i < 14; i++) {
+      text(textoB[i], 50, i * 50 - 350);
+    }
+    textSize(28);
+    for (int i = 14; i < 16; i++) {
+      text(textoB[i], 50, i * 50 - 315);
+    }
+  } else if (inicial==9) {
+    fill (0);
+    for (int i = 16; i < 22; i++) {
+      text(textoB[i], 50, i * 40 - 595);
+    }
+    for (int i = 22; i < 27; i++) {
+      text(textoB[i], 50, i * 40 - 535);
+    }
+  } else if (inicial==17) {
+    fill (255);
+    for (int i = 27; i < 31; i++) {
+      text(textoB[i], 50, i * 40 - 710);
+    }
+  } else if (inicial==10) {
+    fill (0);
+    for (int i = 31; i < 36; i++) {
+      text(textoB[i], 50, i * 40 - 1190);
+    }
+    for (int i = 36; i < 39; i++) {
+      text(textoB[i], 50, i * 40 - 1110);
+    }
+  } else if (inicial==11) {
+    fill (0);
+    for (int i = 39; i < 45; i++) {
+      text(textoB[i], 70, i * 40 - 1500);
+    }
+  } else if (inicial==12) {
+    fill (0);
+    for (int i = 45; i < 49; i++) {
+      text(textoB[i], 70, i * 50 - 2000);
     }
   }
 }
