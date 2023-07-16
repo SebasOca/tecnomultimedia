@@ -40,5 +40,26 @@ void textos() {
     for (int i = 44; i < 52; i++) {
       text(texto[i], 40, i * 50 - 2100);
     }
+  } else if (inicial==15) {
+    fill (0);
+    for (int i = 52; i < 55; i++) {
+      text(texto[i], 35, i * 50 - 2550);
+    }
+    for (int i = 55; i < 58; i++) {
+      text(texto[i], 35, i * 50 - 2350);
+    }
+  } else if (inicial==16) {
+    fill (41, 48, 75);
+    for (int i = 58; i < 62; i++) {
+      text(texto[i], 37, i * 50 - 2850);
+    }
+    for (int i = 62; i < 66; i++) {
+      text(texto[i], 37, i * 50 - 2750);
+    }
+  } else if (inicial==7) {
+    fill (0);
+    for (int i = 66; i < 74; i++) {
+      text(texto[i], 40, i * 50 /2- 3000);
+    }
   }
 }
