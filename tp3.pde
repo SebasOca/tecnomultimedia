@@ -2,7 +2,7 @@
 
 PImage [] fondos = new PImage [19];
 int inicial = 0;
-String [] parrafos;
+String [] texto;
 
 
 void setup () {
@@ -11,8 +11,8 @@ void setup () {
     int I = i + 1;
     fondos[i] = loadImage("fondo" + I +".jpg");
   }
-
-  parrafos = loadStrings("textos.txt");
+  
+  texto = loadStrings("textos.txt");
 }
 
 void draw () {
@@ -20,14 +20,12 @@ void draw () {
   image (fondos[inicial], 0, 0, 600, 600);
   botonera();
 
-  textSize(30);
-  for (int i = 0; i < parrafos.length; i++) {
-    text(parrafos[i], 100, i * 50 + 100);
-  }
+  textSize(28);
+  textos();
 }
 
 void mouseClicked() {
-  
+
   //historias
   if (dist(mouseX, mouseY, 400, 539) < 30) {
     if (inicial == 18) {
@@ -36,7 +34,7 @@ void mouseClicked() {
       inicial++;
     }
   }
-  
+
   if (dist(mouseX, mouseY, 200, 539) < 30) {
     if (inicial == 0) {
       inicial = 18;
@@ -44,7 +42,7 @@ void mouseClicked() {
       inicial--;
     }
   }
-  
+
   if (inicial == 2) {
     if (dist(mouseX, mouseY, 300, 533) < 30) {
       inicial = 13;
@@ -64,7 +62,7 @@ void mouseClicked() {
       inicial++;
     }
   }
-  
+
   if (inicial == 15) {
     if (dist(mouseX, mouseY, 300, 533) < 30) {
       inicial = 7;
@@ -74,7 +72,7 @@ void mouseClicked() {
       inicial++;
     }
   }
-  
+
   if (inicial == 9) {
     if (dist(mouseX, mouseY, 300, 533) < 30) {
       inicial = 17;
@@ -84,7 +82,7 @@ void mouseClicked() {
       inicial++;
     }
   }
-  
+
   //créditos
   if (inicial == 0 && dist(mouseX, mouseY, 200, 539) < 30) {
     inicial = 19;
