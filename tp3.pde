@@ -65,7 +65,7 @@ void mouseClicked() {
     }
   }
 
-  if (inicial == 15) {
+  if (inicial == 14) {
     if (dist(mouseX, mouseY, 300, 533) < 30) {
       inicial = 7;
     } else if (dist(mouseX, mouseY, 100, 550) < 30) {
@@ -84,9 +84,16 @@ void mouseClicked() {
       inicial++;
     }
   }
+  
+  //finales
+  if (inicial ==13 || inicial == 15 || inicial == 17){
+    if (dist(mouseX, mouseY, 400, 539) < 30){
+      inicial = 18;
+    }
+  }
 
   //créditos
   if (inicial == 0 && dist(mouseX, mouseY, 200, 539) < 30) {
-    inicial = 19;
+    inicial = 18;
   }
 }

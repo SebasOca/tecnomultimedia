@@ -104,5 +104,14 @@ void textos() {
     for (int i = 45; i < 49; i++) {
       text(textoB[i], 70, i * 50 - 2000);
     }
+  } else if (inicial==18) {
+    fill (255);
+    for (int i = 51; i < 55; i++) {
+      text(textoB[i], 70, i * 50 - 2300);
+    }
+    textSize(34);
+    for (int i = 49; i < 51; i++) {
+      text(textoB[i], 230, i * 50 - 2310);
+    }
   }
 }
