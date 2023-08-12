@@ -1,5 +1,5 @@
 void diagIzq() {
-  fill (227, 186, 23);
+  fill (238,182, 9);
 
   //sección diz 1
   for (int i=0; i<5; i++) {
@@ -7,7 +7,7 @@ void diagIzq() {
       pushMatrix();
       translate(i*tamX*1.9, j*tamY*1.15);
       float distancia = dist(i*tamX*7, j*tamY*7, 400, 200);
-      float miColor = map(distancia, 0, 500, 255, 110);
+      float miColor = map(distancia, 100, 500, 255, 110);
       fill(miColor*1.4, miColor/1.1, miColor/3);
       rotate(radians(-45));
       rect(283, 294, tamX, tamY);

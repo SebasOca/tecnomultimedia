@@ -6,6 +6,9 @@ void cuadrosVerticales() {
     for (int j=0; j<4; j++) {
       pushMatrix();
       translate(484, 7);
+      float distancia = dist(i*tamX*8, j*tamY*10, 400, 200);
+      float miColor = map(distancia, 0, 400, 0, 100);
+      fill(miColor*1.4, miColor/1.4, miColor/3);
       rect(15.4*i, 14.8*j, tamX, tamY);
       rect(0, 61, tamX, tamY);
       popMatrix();
@@ -47,6 +50,7 @@ void cuadrosVerticales() {
   //sección vertical 5
   for (int i=0; i<11; i++) {
     for (int j=0; j<2; j++) {
+      fill(245, 37, 25);
       pushMatrix();
       translate(606, 388);
       rect(15.5*i, 15*j, tamX, tamY);
