@@ -1,5 +1,5 @@
 void cuadrosVerticales() {
-  fill (52, 43, 7);
+  //fill (52, 43, 7);
 
   //sección vertical 1
   for (int i=0; i<8; i++) {
@@ -78,6 +78,13 @@ void cuadrosVerticales() {
       fill(245, 37, 25);
       pushMatrix();
       translate(606, 388);
+      if (i<5 && j<2) {
+        fill(245, 37, 25);
+      } else {
+        float distancia = dist(i*tamX*8, j*tamY, 300, 200);
+        float miColor = map(distancia, 200, 300, 0, 100);
+        fill(miColor*1.4, miColor/1.4, miColor/3);
+      }
       rect(15.5*i, 15*j, tamX, tamY);
       popMatrix();
     }
