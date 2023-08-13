@@ -1,5 +1,5 @@
 void diagIzq() {
-  fill (238,182, 9);
+  fill (243, 185, 23);
 
   //sección diz 1
   for (int i=0; i<5; i++) {
@@ -31,8 +31,8 @@ void diagIzq() {
     for (int j=0; j<6; j++) {
       pushMatrix();
       translate(i*tamX*1.9, j*tamY*1.15);
-      float distancia = dist(i*tamX*7, j*tamY*3, 200, 400);
-      float miColor = map(distancia, 0, 500, 255, 110);
+      float distancia = dist(i*tamX, j*tamY*3, 200, 400);
+      float miColor = map(distancia, 200, 400, 255, 110);
       fill(miColor*1.4, miColor/1.1, miColor/3);
       rotate(radians(-45));
       rect(381, 522, tamX, tamY);
@@ -45,6 +45,15 @@ void diagIzq() {
     for (int j=0; j<9; j++) {
       pushMatrix();
       translate(i*tamX*1.9, j*tamY*1.15);
+      if (i<6) {
+        float distancia = dist(i*tamX*6, j*tamY, 500, 300);
+        float miColor = map(distancia, 210, 340, 0, 100);
+        fill(miColor*1.4, miColor/1.4, miColor/3);
+      } else {
+        float distancia = dist(i*tamX, j*tamY, 540, 200);
+        float miColor = map(distancia, 500, 800, 180, 0);
+        fill(miColor*1.4, miColor/1.1, miColor/3);
+      }
       rotate(radians(-45));
       rect(165, 456, tamX, tamY);
       popMatrix();

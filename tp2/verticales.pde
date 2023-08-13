@@ -1,15 +1,15 @@
 void cuadrosVerticales() {
-  //fill (52, 43, 7);
 
   //sección vertical 1
   for (int i=0; i<8; i++) {
     for (int j=0; j<4; j++) {
       pushMatrix();
       translate(484, 7);
-      float distancia = dist(i*tamX*8, j*tamY*10, 400, 200);
-      float miColor = map(distancia, 0, 400, 0, 100);
+      float distancia = dist(i*tamX*7, j*tamY, 400, 200);
+      float miColor = map(distancia, 0, 300, 0, 100);
       fill(miColor*1.4, miColor/1.4, miColor/3);
       rect(15.4*i, 14.8*j, tamX, tamY);
+      fill (180, 120, 70);
       rect(0, 61, tamX, tamY);
       popMatrix();
     }
@@ -27,8 +27,8 @@ void cuadrosVerticales() {
       } else if (i>2 && j>4) {
         fill(245, 37, 25);
       } else {
-        float distancia = dist(i*tamX*9, j*tamY*4, 200, 350);
-        float miColor = map(distancia, 300, 500, 110, 255);
+        float distancia = dist(i*tamX, j*tamY*4, 200, 350);
+        float miColor = map(distancia, 300, 600, 100, 255);
         fill(miColor*1.4, miColor/1.4, miColor/3);
       }
       rect(15.4*i, 14.9*j, tamX, tamY);
@@ -45,7 +45,7 @@ void cuadrosVerticales() {
         fill(245, 37, 25);
       } else {
         float distancia = dist(i*tamX, j*tamY, 0, 400);
-        float miColor = map(distancia, 350, 900, 0, 255);
+        float miColor = map(distancia, 350, 900, 40, 255);
         fill(miColor*1.4, miColor/1.4, miColor/3);
       }
       rect(15.5*i, 14.9*j, tamX, tamY);
@@ -64,7 +64,7 @@ void cuadrosVerticales() {
         fill(245, 37, 25);
       } else {
         float distancia = dist(i*tamX, j*tamY, 0, 400);
-        float miColor = map(distancia, 400, 200, 0, 250);
+        float miColor = map(distancia, 400, 200, 50, 250);
         fill(miColor*1.4, miColor/1.4, miColor/3);
       }
       rect(15.5*i, 15*j, tamX, tamY);
@@ -82,7 +82,7 @@ void cuadrosVerticales() {
         fill(245, 37, 25);
       } else {
         float distancia = dist(i*tamX*8, j*tamY, 300, 200);
-        float miColor = map(distancia, 200, 300, 0, 100);
+        float miColor = map(distancia, 200, 300, 50, 100);
         fill(miColor*1.4, miColor/1.4, miColor/3);
       }
       rect(15.5*i, 15*j, tamX, tamY);

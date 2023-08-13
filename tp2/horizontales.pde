@@ -1,5 +1,4 @@
 void cuadrosHorizontales() {
-  fill (52, 43, 7);
 
   //sección horiz 1
   for (int i=0; i<2; i++) {
@@ -9,7 +8,7 @@ void cuadrosHorizontales() {
       if (j<10 && j>5) {
         fill(245, 37, 25);
       } else {
-        fill (53, 50, 59);
+        fill (70, 43, 11);
       }
       rect(15.4*i, 15.3*j, tamY, tamX);
       popMatrix();
@@ -81,7 +80,7 @@ void cuadrosHorizontales() {
     for (int j=0; j<2; j++) {
       pushMatrix();
       translate(607, 190);
-      fill (53, 50, 59);
+      fill (70, 43, 11);
       rect(15.5*i, 15.3*j, tamY, tamX);
       popMatrix();
     }
@@ -95,7 +94,7 @@ void cuadrosHorizontales() {
       if (j<6 && j>1) {
         fill(245, 37, 25);
       } else {
-        fill (53, 50, 59);
+        fill (70, 43, 11);
       }
       rect(15.5*i, 15.27*j, tamY, tamX);
       popMatrix();
@@ -123,7 +122,7 @@ void cuadrosHorizontales() {
       if (i<2) {
         fill(245, 37, 25);
       } else {
-        fill (53, 50, 59);
+        fill (70, 43, 11);
       }
       rect(15.4*i, 15.3*j, tamY, tamX);
       popMatrix();
