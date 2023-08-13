@@ -7,7 +7,7 @@ int angulo = 45;
 float tamCX, tamCY;
 int tamX = 8;
 int tamY = 13;
-boolean reiniciar = false;
+boolean reinicio = false;
 
 void setup() {
   size(800, 400);
@@ -28,6 +28,10 @@ void draw() {
   diagDer();
 }
 
+boolean reinicio() {
+    return tamX==8;
+}
+
 void mouseClicked() {
   if (mouseButton == RIGHT) {
     tamX++;
@@ -37,7 +41,8 @@ void mouseClicked() {
     tamX--;
     tamY--;
   }
-  if (mouseX<width/2 && mouseY<height) {
+  if (mouseX<width/2) {
+    reinicio = true;
     tamX = 8;
     tamY = 13;
   }
