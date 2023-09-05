@@ -1,0 +1,18 @@
+Defendiendo a 
+Atlantis
+
+
+
+Instrucciones
+
+Intenta sobrevivir un minuto frente a las naves enemigas
+Pulsa la tecla "izquierda" para abrir fuego con la torre izquierda y la tecla "derecha" para la torre derecha
+Pulsa la tecla "arriba" para atacar con el cañón central
+Elimina a los invasores antes de que destrullan la ciudad
+
+
+
+Créditos
+
+Recreado por Sebastián Ocampo
+Basado en el juego de Imagic
