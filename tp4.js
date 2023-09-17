@@ -4,14 +4,22 @@ let fondo, en1, en2, inicial, b1, b2, b3, b4, b5, fondocred;
 let ciudad, domo, puente, torreI, torreC, torreD;
 let fuente;
 let texto;
-let posEX;
+let posEX, posEX2;
 let tiempoI = 60;
 let tiempo;
-let posX = 20;
-let posY = 364;
-let dispX = posX + 14;
-let dispY = posY - 8;
-let fuego = false;
+
+let dispIPosX = [];
+let dispIPosY = [];
+let dispDPosX = [];
+let dispDPosY = [];
+let disparoIS = [];
+let disparoDS = [];
+
+let cantDisp = 100;
+
+let disparoI = false;
+let disparoD = false;
+
 
 function preload() {
   inicial = loadImage('data/inicial.png');
@@ -35,16 +43,27 @@ function preload() {
   en2 = loadImage('data/enemigo2.png');
 
   posEX = -70;
+  posEX2 = 870;
 }
 
 function setup() {
   createCanvas(800, 600);
+  
+  for(let i=0; i<cantDisp; i++){
+    dispIPosX.push(21);
+    dispIPosY.push(363);
+    disparoIS.push(false);
+  }
+  for(let i=0; i<cantDisp; i++){
+    dispDPosX.push(760);
+    dispDPosY.push(363);
+    disparoDS.push(false);
+  }
 }
 
 function draw() {
   background (255);
   pantallas();
-  
 }
 
 function mouseClicked() {
@@ -65,11 +84,12 @@ function mouseClicked() {
   }
 }
 
-function keyPressed() {
+function control() {
   if (keyIsPressed) {
     if (keyCode == RIGHT_ARROW) {
-      dispX++;
-      dispY--;
+      disparoD = true;
+    } else if (keyCode == LEFT_ARROW) {
+      disparoI = true;
     }
   }
 }
