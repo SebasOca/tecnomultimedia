@@ -1,4 +1,4 @@
-//Enlace al video:
+//Enlace al video: SIN VIDEO - EL CÓDIGO DEJÓ DE FUNCIONAR 21:56
 let pantalla = 0;
 let fondo, en1, en2, inicial, b1, b2, b3, b4, b5, fondocred;
 let ciudad, domo, puente, torreI, torreC, torreD;
