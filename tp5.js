@@ -2,6 +2,7 @@
 let inicial, b1, b2, b3;
 let fondo, ciudad;
 let torreI, torreD, principito, enemigo;
+let rayo;
 let fuente;
 let posEX;
 let juego;

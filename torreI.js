@@ -6,6 +6,6 @@ class TorreI{
   }
   
   dibujar(){
-    image(this.imagen, 0, 550, 80, 80);
+    image(this.imagen, 0, 464, 80, 40);
   }
 }

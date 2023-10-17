@@ -1,11 +1,9 @@
-class Ciudad{
-  constructor(){
-    this.posX = 0;
-    this.posY = 0;
+class Ciudad {
+  constructor() {
     this.imagen = ciudad;
   }
-  
-  dibujar(){
-    image(this.imagen, 720, 550, 400, 100);
+
+  dibujar() {
+    image(this.imagen, 180, 360, 460, 180);
   }
 }

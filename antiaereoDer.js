@@ -2,7 +2,7 @@ class TorreD{
   constructor(){
     this.posX = 0;
     this.posY = 0;
-    this.imagen = torreD;
+    this.imagen = rayo;
   }
   
   dibujar(){
