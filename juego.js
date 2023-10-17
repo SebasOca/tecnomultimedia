@@ -10,7 +10,7 @@ class Juego{
     this.dibujarFondo();
     //this.contador.dibujar();
     //this.tiempo.dibujar();
-    //this.ciudad.dibujar();
+    this.ciudad.dibujar();
     this.principito.dibujar();
     this.enemigo.dibujar();
     this.torreI.dibujar();

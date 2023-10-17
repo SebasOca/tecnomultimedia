@@ -27,7 +27,7 @@ function preload() {
 
 function setup() {
   createCanvas(800, 600);
- // juego = new Juego();
+  juego = new Juego();
 }
 
 
@@ -39,10 +39,11 @@ function draw() {
   textAlign(CENTER);
   textSize(22);
   text("Pulsa las flechas Izq. y Der. para disparar\ndesde sus respectivas torres", 400, 520);
+  juego.dibujar();
 }
 
 function mouseClicked() {
   if (mouseX>290 && mouseX<510 && mouseY>400 && mouseY<480) {
-    objJuego.dibujar();
+    juego.dibujar();
   }
 }
