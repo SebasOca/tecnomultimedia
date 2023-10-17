@@ -1,9 +1,9 @@
-class Principito {
+class Enemigo {
   constructor() {
-    this.posX = -20;
+    this.posX = -40;
     this.posY = random(-50, height);
     this.velocidad = random(1, 3);
-    this.imagen = principito;
+    this.imagen = enemigo;
   }
 
   dibujar() {

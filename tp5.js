@@ -1,9 +1,10 @@
 //Enlace al video:
 let inicial, b1, b2, b3;
-let fondo, ciudad, domo, puente
+let fondo, ciudad;
 let torreI, torreD, principito, enemigo;
 let fuente;
 let posEX;
+let juego;
 
 
 function preload() {
@@ -14,8 +15,6 @@ function preload() {
 
   fondo = loadImage('data/fondo.png');
   ciudad = loadImage('data/ciudad.png');
-  domo = loadImage('data/domo.png');
-  puente = loadImage('data/puente.png');
 
   torreI = loadImage('data/torreI.png');
   torreD = loadImage('data/torreD.png');
@@ -28,6 +27,7 @@ function preload() {
 
 function setup() {
   createCanvas(800, 600);
+ // juego = new Juego();
 }
 
 
@@ -42,7 +42,7 @@ function draw() {
 }
 
 function mouseClicked() {
-  if (mouseX>290 && mouseX<410 && mouseY>700 && mouseY<480) {
+  if (mouseX>290 && mouseX<510 && mouseY>400 && mouseY<480) {
     objJuego.dibujar();
   }
 }
