@@ -3,9 +3,7 @@ class Juego {
     //this.contador = new Contador();
     //this.tiempo = new Tiempo();
     this.fondo = fondo;
-    this.ciudad = new Ciudad();
-    this.torreI = new TorreI();
-    this.torreD = new TorreD();
+    this.torres = new Torres();
     this.principito = new Principito();
     this.enemigo = new Enemigo();
   }
@@ -14,12 +12,11 @@ class Juego {
     this.dibujarFondo();
     //this.contador.dibujar();
     //this.tiempo.dibujar();
-    this.ciudad.dibujar();
-    this.torreI.dibujar();
-    this.torreD.dibujar();
-    
+
+    this.torres.dibujar();
     this.principito.dibujar();
     this.enemigo.dibujar();
+    //this.disparos.dibujar();
   }
 
   dibujarFondo() {

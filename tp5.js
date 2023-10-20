@@ -1,6 +1,6 @@
 //Enlace al video:
 let inicial, b1, b2, b3;
-let fondo, ciudad;
+let fondo;
 let torreI, torreD, principito, enemigo;
 let rayo;
 let fuente;
@@ -15,7 +15,6 @@ function preload() {
   b3 = loadImage('data/bvolver.png');
 
   fondo = loadImage('data/fondo.png');
-  ciudad = loadImage('data/ciudad.png');
 
   torreI = loadImage('data/torreI.png');
   torreD = loadImage('data/torreD.png');

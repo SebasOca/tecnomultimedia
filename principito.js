@@ -1,7 +1,6 @@
 class Principito {
   constructor() {
     this.posX = -20;
-    this.velocidad = random(1, 3);
     this.imagen = principito;
   }
 

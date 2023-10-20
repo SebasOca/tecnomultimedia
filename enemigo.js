@@ -1,7 +1,6 @@
 class Enemigo {
   constructor() {
-    this.posX = -170;
-    this.posY = random(-50, height);
+    this.posX = -250;
     this.velocidad = random(1, 3);
     this.imagen = enemigo;
   }
