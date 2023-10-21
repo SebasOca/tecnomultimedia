@@ -1,7 +1,7 @@
 class Tiempo {
   constructor() {
     this.tiempo = 0;
-    this.tiempoLimite = 10;
+    this.tiempoLimite = 10;  //max. 45seg
   }
 
   dibujar() {

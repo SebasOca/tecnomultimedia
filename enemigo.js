@@ -7,6 +7,6 @@ class Enemigo {
 
   dibujar() {
     image(this.imagen, this.posX, 200, 80, 45);
-    this.posX ++;
+    this.posX += this.velocidad;
   }
 }

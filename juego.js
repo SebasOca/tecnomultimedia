@@ -6,6 +6,7 @@ class Juego {
     this.torres = new Torres();
     this.principito = new Principito();
     this.enemigo = new Enemigo();
+    this.disparo = new Disparo();
   }
 
   dibujar() {
@@ -13,10 +14,10 @@ class Juego {
     //this.contador.dibujar();
     //this.tiempo.dibujar();
 
-    this.torres.dibujar();
     this.principito.dibujar();
     this.enemigo.dibujar();
-    //this.disparos.dibujar();
+    this.disparo.dibujar();
+    this.torres.dibujar();
   }
 
   dibujarFondo() {
