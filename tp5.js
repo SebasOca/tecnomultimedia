@@ -43,8 +43,12 @@ function draw() {
   juego.dibujar();
 }
 
-function mouseClicked() {
-  if (mouseX>290 && mouseX<510 && mouseY>400 && mouseY<480) {
-    juego.dibujar();
-  }
+//function mouseClicked() {
+//  if (mouseX>290 && mouseX<510 && mouseY>400 && mouseY<480) {
+//    juego.dibujar();
+//  }
+//}
+
+function keyPressed(){
+  juego.disparando();
 }
