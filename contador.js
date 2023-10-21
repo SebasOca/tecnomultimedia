@@ -4,7 +4,6 @@ class Contador{
   }
   
   dibujar(){
-    fill(255);
     textSize(15);
     text(this.cantidad + " Derribados", 90, 50);
   }

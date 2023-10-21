@@ -1,11 +1,10 @@
 class Tiempo {
   constructor() {
     this.tiempo = 0;
-    this.tiempoFinal = 10;  //max. 45seg
+    this.tiempoFinal = 20;  //max. 45seg
   }
 
   dibujar() {
-    fill(255);
     textSize(15);
     text("Tiempo: "+ this.tiempo + " seg.", 90, 75);
 

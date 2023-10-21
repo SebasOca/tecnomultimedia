@@ -35,7 +35,7 @@ function setup() {
 function draw() {
   image(inicial, 0, 0, 800, 600);
   image(b1, 290, 400, 220, 80);
-  fill(255);
+  fill(119, 3, 255);
   textFont(fuente);
   textAlign(CENTER);
   textSize(22);
