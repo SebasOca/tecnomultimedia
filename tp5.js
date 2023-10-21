@@ -1,4 +1,4 @@
-//Enlace al video:
+//Enlace al video: https://youtu.be/epk2MA85q5Q
 let inicial, b1, b2, b3;
 let fondo;
 let torreI, torreD, principito, enemigo;
