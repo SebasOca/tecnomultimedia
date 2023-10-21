@@ -5,11 +5,11 @@ class Contador{
   
   dibujar(){
     fill(255);
-    textSize(30);
-    text(this.cantidad, 20, 30 , + " Derrivados");
+    textSize(15);
+    text(this.cantidad + " Derribados", 90, 50);
   }
   
-  incrementar(){
+  suma(){
     this.cantidad++;
   }
 }

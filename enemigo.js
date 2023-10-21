@@ -1,12 +1,19 @@
 class Enemigo {
   constructor() {
     this.posX = -250;
-    this.velocidad = random(1, 3);
+    this.posY = 200;
     this.imagen = enemigo;
+    this.derribado = false;
   }
 
   dibujar() {
-    image(this.imagen, this.posX, 200, 80, 45);
-    this.posX += this.velocidad;
+    if (!this.derribado) {
+      image(this.imagen, this.posX, this.posY, 80, 45);
+      this.posX ++;
+    }
+  }
+
+  derribar() {
+    this.derribado = true;
   }
 }

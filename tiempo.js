@@ -1,13 +1,13 @@
 class Tiempo {
   constructor() {
     this.tiempo = 0;
-    this.tiempoLimite = 10;  //max. 45seg
+    this.tiempoFinal = 10;  //max. 45seg
   }
 
   dibujar() {
     fill(255);
-    textSize(30);
-    text( "Tiempo: "+ this.tiempo, 100, 560);
+    textSize(15);
+    text("Tiempo: "+ this.tiempo + " seg.", 90, 75);
 
     this.incrementarTiempo();
   }
@@ -18,7 +18,7 @@ class Tiempo {
     }
   }
 
-  llegoLimite() {
-    return this.tiempo >= this.tiempoLimite;
+  termino() {
+    return this.tiempo >= this.tiempoFinal;
   }
 }

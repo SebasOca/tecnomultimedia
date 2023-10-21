@@ -1,7 +1,7 @@
 class Juego {
   constructor() {
-    //this.contador = new Contador();
-    //this.tiempo = new Tiempo();
+    this.contador = new Contador();
+    this.tiempo = new Tiempo();
     this.fondo = fondo;
     this.torres = new Torres();
     this.principito = new Principito();
@@ -11,8 +11,8 @@ class Juego {
 
   dibujar() {
     this.dibujarFondo();
-    //this.contador.dibujar();
-    //this.tiempo.dibujar();
+    this.contador.dibujar();
+    this.tiempo.dibujar();
 
     this.principito.dibujar();
     this.enemigo.dibujar();
@@ -22,5 +22,9 @@ class Juego {
 
   dibujarFondo() {
     image(this.fondo, 0, 0, width, height);
+  }
+  
+  impacto(){
+    
   }
 }
