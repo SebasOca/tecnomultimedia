@@ -1,0 +1,11 @@
+class Aventura{
+  constructor() {
+    
+    
+  }
+  
+  dibujar(){
+    
+    
+  }  
+}
