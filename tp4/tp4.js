@@ -4,8 +4,6 @@ let fondo, en1, en2, inicial, b1, b2, b3, b4, b5, fondocred;
 let ciudad, domo, puente, torreI, torreC, torreD;
 let fuente;
 let posEX, posEX2;
-let tiempoI = 60;
-let tiempo;
 
 let dispIPosX = [];
 let dispIPosY = [];
@@ -47,16 +45,16 @@ function preload() {
 function setup() {
   createCanvas(800, 600);
   
-//  for(let i=0; i<cantDisp; i++){
-//    dispIPosX.push(21);
-//    dispIPosY.push(363);
-//    disparoIS.push(false);
-//  }
-//  for(let i=0; i<cantDisp; i++){
-//    dispDPosX.push(760);
-//    dispDPosY.push(363);
-//    disparoDS.push(false);
-//  }
+  for(let i=0; i<cantDisp; i++){
+    dispIPosX.push(21);
+    dispIPosY.push(363);
+    disparoIS.push(false);
+  }
+  for(let i=0; i<cantDisp; i++){
+    dispDPosX.push(780);
+    dispDPosY.push(330);
+    disparoDS.push(false);
+  }
 }
 
 function draw() {
@@ -82,12 +80,12 @@ function mouseClicked() {
   }
 }
 
-//function control() {
-//  if (keyIsPressed) {
-//    if (keyCode == RIGHT_ARROW) {
-//      disparoD = true;
-//    } else if (keyCode == LEFT_ARROW) {
-//      disparoI = true;
-//    }
-//  }
-//}
+function control() {
+  if (keyIsPressed) {
+    if (keyCode == RIGHT_ARROW) {
+      disparoD = true;
+    } else if (keyCode == LEFT_ARROW) {
+      disparoI = true;
+    }
+  }
+}
