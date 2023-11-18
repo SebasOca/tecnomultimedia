@@ -39,7 +39,7 @@ function pantallas() {
 
     //defensas
     disparos();
-
+    torres();
 
     //proteger
     image(ciudad, 80, 487, 81, 22);
