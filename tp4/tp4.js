@@ -1,4 +1,4 @@
-//Enlace al video: 
+//Enlace al video: https://youtu.be/EgtuLUtafoI
 
 let pantalla = 0;
 let fondo, en1, en2, inicial, b1, b2, b3, b4, b5, fondocred;
