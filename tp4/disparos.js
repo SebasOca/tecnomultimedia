@@ -15,5 +15,19 @@ function disparos() {
     }
   }
 
-  //der: X=775, Y=329
+  //der
+  for (let i=0; i<cantProyectiles; i++) {
+    if (disparoDer && proyectilesDerDisparados[i] == false) {
+      proyectilesDerDisparados[i] = true;
+      disparoDer = false;
+    }
+  }
+  for (let i=0; i<cantProyectiles; i++) {
+    fill(221, 229, 12);
+    ellipse(proyectilDerechoX[i], proyectilDerechoY[i], 10, 10);
+    if (proyectilesDerDisparados[i] == true) {
+      proyectilDerechoX[i]-=14;
+      proyectilDerechoY[i]-=8;
+    }
+  }
 }

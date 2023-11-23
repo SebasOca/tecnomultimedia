@@ -4,19 +4,27 @@ let pantalla = 0;
 let fondo, en1, en2, inicial, b1, b2, b3, b4, b5, fondocred;
 let ciudad, domo, puente, torreI, torreC, torreD;
 let fuente;
-let posEX, posEX2, posYBom;
+let posEX, posEX2;
+let posYBom = 140;
 
 let proyecIzqPosX = 22;
 let proyecIzqPosY = 362;
 let proyectilIzquierdoX = [];
 let proyectilIzquierdoY = [];
 let proyectilesIzqDisparados = [];
+let disparoIzq = false;
+
+let proyecDerPosX = 775;
+let proyecDerPosY = 329;
+let proyectilDerechoX = [];
+let proyectilDerechoY = [];
+let proyectilesDerDisparados = [];
+let disparoDer = false;
 
 let cantProyectiles = 100;
 
-let disparoIzq = false;
-let disparoDer = false;
 let enemigoMuerto = false;
+let enemigoMuerto2 = false;
 let puntos = 0;
 
 
@@ -42,7 +50,6 @@ function preload() {
 
   posEX = -70;
   posEX2 = 870;
-  posYBom = 100;
 }
 
 function setup() {
@@ -52,6 +59,11 @@ function setup() {
     proyectilIzquierdoX.push(proyecIzqPosX);
     proyectilIzquierdoY.push(proyecIzqPosY);
     proyectilesIzqDisparados.push(false);
+  }
+  for(let i=0; i<cantProyectiles; i++){
+    proyectilDerechoX.push(proyecDerPosX);
+    proyectilDerechoY.push(proyecDerPosY);
+    proyectilesDerDisparados.push(false);
   }
   
   vidaEnemigos = 1;

@@ -9,4 +9,7 @@ function sumar() {
   if (!enemigoMuerto) {
     puntos ++;
   }
+  if (!enemigoMuerto2) {
+    puntos ++;
+  }
 }
