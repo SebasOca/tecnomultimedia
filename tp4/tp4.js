@@ -6,18 +6,17 @@ let ciudad, domo, puente, torreI, torreC, torreD;
 let fuente;
 let posEX, posEX2, posYBom;
 
-let dispIPosX = [];
-let dispIPosY = [];
-let dispDPosX = [];
-let dispDPosY = [];
-let disparoIS = [];
-let disparoDS = [];
+let proyecIzqPosX = 22;
+let proyecIzqPosY = 362;
+let proyectilIzquierdoX = [];
+let proyectilIzquierdoY = [];
+let proyectilesIzqDisparados = [];
 
-let cantDisp = 100;
+let cantProyectiles = 100;
 
-let disparoI = false;
-let disparoD = false;
-let vidaEnemigos = [];
+let disparoIzq = false;
+let disparoDer = false;
+let enemigoMuerto = false;
 let puntos = 0;
 
 
@@ -48,17 +47,14 @@ function preload() {
 
 function setup() {
   createCanvas(800, 600);
+  
+  for(let i=0; i<cantProyectiles; i++){
+    proyectilIzquierdoX.push(proyecIzqPosX);
+    proyectilIzquierdoY.push(proyecIzqPosY);
+    proyectilesIzqDisparados.push(false);
+  }
+  
   vidaEnemigos = 1;
-  for(let i=0; i<cantDisp; i++){
-    dispIPosX.push(21);
-    dispIPosY.push(363);
-    disparoIS.push(false);
-  }
-  for(let i=0; i<cantDisp; i++){
-    dispDPosX.push(780);
-    dispDPosY.push(330);
-    disparoDS.push(false);
-  }
 }
 
 function draw() {
@@ -86,10 +82,10 @@ function mouseClicked() {
 
 function control() {
   if (keyIsPressed) {
-    if (keyCode == RIGHT_ARROW) {
-      disparoD = true;
-    } else if (keyCode == LEFT_ARROW) {
-      disparoI = true;
+    if (keyCode == LEFT_ARROW) {
+      disparoIzq = true;
+    } else if (keyCode == RIGHT_ARROW) {
+      disparoDer = true;
     }
   }
 }

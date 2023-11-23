@@ -47,6 +47,7 @@ function pantallas() {
     image(puente, 480, 485, 80, 24);
 
     enemigos();
+    verificarVidaEnemigos();
     control();
     contador();
     
