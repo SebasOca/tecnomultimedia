@@ -1,25 +1,35 @@
 //Enlace al video:
-
+let aventura;
 let bSiguiente, bAlternativa;
 let fondo = [];
-let cantPant = 17;
+let cantPant = 18;
 let fuente;
-
+let textos;
 
 function preload() {
-  fuente = loadFont('data/nunito-sb.ttf');
   bSiguiente = loadImage('data/bSiguiente.png');
   bAlternativa = loadImage('data/bAlternativa.png');
   
+  fuente = loadFont('data/nunito-sb.ttf');
+  textos = loadStrings ('data/textos.txt');
+  
   for (let i=0; i<cantPant; i++) {
-    fondo[i] = loadImage('data/fondo'+ i +'.png');
+    fondo[i] = loadImage('data/fondo'+ i +'.jpg');
   }
 }
 
 function setup() {
   createCanvas(800, 600);
+  aventura = new Aventura();
+  
 }
 
 function draw() {
   background (20, 27, 90);
+  this.aventura.dibujar();
+  
+}
+
+function click() {
+  this.aventura.click();
 }

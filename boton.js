@@ -5,6 +5,7 @@ class Boton {
   }
 
   dibujar() {
+    //base de fondo
     stroke(43, 237, 200);
     strokeWeight(3);
     fill (10, 90);
@@ -12,14 +13,16 @@ class Boton {
     noStroke();
     fill (0, 60);
     ellipse (400, 670, 800, 200);
-
-    image(bSiguiente, 505, 500, 70, 70);
-    image(bAlternativa, 170, 450, 70, 70);
-  }
-
-  paraPantallaDeUnBoton() {
+    
+    this.boton1();
   }
   
-  paraPantallaDeDosBotones() {
+  boton1(){
+    image(this.bSiguiente, 550, 510, 60, 60);
   }
+  
+  boton2(){
+    image(this.bAlternativa, 190, 510, 60, 60);
+  }
+  
 }
