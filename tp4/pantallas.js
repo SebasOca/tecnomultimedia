@@ -17,7 +17,10 @@ function pantallas() {
     image(torreI, 0, 354, 40, 23);
     image(torreC, 360, 320, 40, 23);
     image(torreD, 760, 320, 40, 23);
-    image(ciudad, 80, 487, 81, 22);
+    
+    if (!bombardeo && posYBom2<490) {
+      image(ciudad, 80, 487, 81, 22);
+    }
     image(domo, 190, 421, 80, 25);
     image(puente, 480, 485, 80, 24);
     image(en2, 190, 140, 60, 25);

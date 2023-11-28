@@ -1,10 +1,22 @@
 function enemigos() {
-  if (!enemigoMuerto) {
-    image(en2, posEX++, 140, 60, 25);
-    //bombardeo();
+  for (let i=0; i<cantEnemigos; i++) {
+    if (!enemigoMuerto) {
+      image(en2, posEX++*i, posEY, 60, 25);
+      if (posEX > 520 && posYBom<490) {
+        bombardeo = true;
+        fill(255, 0, 0);
+        ellipse(520, posYBom++, 10, 10);
+      }
+    }
   }
+
   if (!enemigoMuerto2) {
-    image(en1, posEX2--, 100, 60, 25);
+    image(en1, posEX2--, posEY2, 60, 25);
+    if (posEX2 < 120 && posYBom2<490) {
+      bombardeo = true;
+      fill(255, 0, 0);
+      ellipse(120, posYBom2++, 10, 10);
+    }
   }
 }
 
@@ -12,24 +24,21 @@ function enemigos() {
 function verificarVidaEnemigos() {
   //impacto
   for (let i=0; i<cantProyectiles; i++) {
-    if (dist (proyectilIzquierdoX[i], proyectilIzquierdoY[i], posEX, 140) < 50 || dist (proyectilDerechoX[i], proyectilDerechoY[i], posEX, 140) < 50) {
-      sumar();
-      enemigoMuerto = true;
-      return vidaEnemigos > 0;
+    if (!enemigoMuerto) {
+      if (dist (proyectilIzquierdoX[i], proyectilIzquierdoY[i], posEX+30, posEY+12) < 30 || dist (proyectilDerechoX[i], proyectilDerechoY[i], posEX+30, posEY+12) < 30) {
+        sumar();
+        enemigoMuerto = true;
+        return vidaEnemigos > 0;
+      }
     }
   }
   for (let i=0; i<cantProyectiles; i++) {
-    if (dist (proyectilIzquierdoX[i], proyectilIzquierdoY[i], posEX2, 140) < 50 || dist (proyectilDerechoX[i], proyectilDerechoY[i], posEX2, 100) < 50) {
-      sumar();
-      enemigoMuerto2 = true;
-      return vidaEnemigos > 0;
+    if (!enemigoMuerto2) {
+      if (dist (proyectilIzquierdoX[i], proyectilIzquierdoY[i], posEX2+30, posEY2+12) < 30 || dist (proyectilDerechoX[i], proyectilDerechoY[i], posEX2+30, posEY2+12) < 30) {
+        sumar();
+        enemigoMuerto2 = true;
+        return vidaEnemigos > 0;
+      }
     }
   }
 }
-
-//function bombardeo(){    // no funciona
-//  if (dist(posEX, 520, 140, posYBom) < 10) {
-//    fill(255, 0, 0);
-//    ellipse(520, posYBom++, 10, 10);
-//  }
-//}

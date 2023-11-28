@@ -1,11 +1,14 @@
 //Enlace al video: https://youtu.be/EgtuLUtafoI
-
 let pantalla = 0;
 let fondo, en1, en2, inicial, b1, b2, b3, b4, b5, fondocred;
 let ciudad, domo, puente, torreI, torreC, torreD;
 let fuente;
-let posEX, posEX2;
+let posEX = -70;
+let posEY = 140;
+let posEX2 = 920;
+let posEY2 = 100;
 let posYBom = 140;
+let posYBom2 = 100;
 
 let proyecIzqPosX = 22;
 let proyecIzqPosY = 362;
@@ -22,9 +25,15 @@ let proyectilesDerDisparados = [];
 let disparoDer = false;
 
 let cantProyectiles = 100;
+let cantEnemigos = 2;
+
+let posESX = [];
+let posESY = [];
+let vidaEnemigos = [];
 
 let enemigoMuerto = false;
 let enemigoMuerto2 = false;
+let bombardeo = true;
 let puntos = 0;
 
 
@@ -47,9 +56,6 @@ function preload() {
   torreC = loadImage('data/torreC.png');
   en1 = loadImage('data/enemigo1.png');
   en2 = loadImage('data/enemigo2.png');
-
-  posEX = -70;
-  posEX2 = 870;
 }
 
 function setup() {
@@ -66,7 +72,13 @@ function setup() {
     proyectilesDerDisparados.push(false);
   }
   
-  vidaEnemigos = 1;
+  for(let i=0; i<cantEnemigos; i++){
+    posESX.push(posEX);
+    posESY.push(posEY);
+    vidaEnemigos.push(1);
+  }
+  
+  //vidaEnemigos = 1;
 }
 
 function draw() {
