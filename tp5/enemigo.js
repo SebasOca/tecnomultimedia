@@ -1,8 +1,8 @@
 class Enemigo {
   constructor() {
-    this.posX = 250;
+    this.posX = -250;
     this.posY = 200;
-    this.velocidad = random(1, 3);
+    this.velocidad = random(1, 2);
     this.imagen = naveEnemigo;
     this.derribado = false;
   }

@@ -15,12 +15,12 @@ class Proyectil {
   dibujar() {  //9 en x, 7 en y
     if (!this.proyectilDisparadoIzq) {
       if (keyCode == LEFT_ARROW) {
-        image(this.imagenI, this.posXI++, this.posYI--, 27, 21);
+        image(this.imagenI, this.posXI+=2, this.posYI-=2, 27, 21);
       }
     }
     if (!this.proyectilDisparadoDer) {
       if (keyCode == RIGHT_ARROW) {
-        image(this.imagenD, this.posXD--, this.posYD--, 27, 21);
+        image(this.imagenD, this.posXD-=2, this.posYD-=2, 27, 21);
       }
     }
   }
