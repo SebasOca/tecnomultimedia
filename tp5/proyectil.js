@@ -7,26 +7,23 @@ class Proyectil {
     this.posYI = 464;
     this.posXD = 715;
     this.posYD = 402;
-    this.proyectilDisparadoIzq = false;
-    this.proyectilDisparadoDer = false;
-    this.cantProyectiles = 50;
+    this.proyectilDisparado = false;
+
   }
 
-  dibujar() {  //9 en x, 7 en y
-    if (!this.proyectilDisparadoIzq) {
-      if (keyCode == LEFT_ARROW) {
-        image(this.imagenI, this.posXI+=2, this.posYI-=2, 27, 21);
-      }
+  dibujar() {  //5 en x, 4 en y
+    if (this.proyectilDisparado) {
+      image(this.imagenI, this.posXI, this.posYI, 27, 21);
+      this.mover();
     }
-    if (!this.proyectilDisparadoDer) {
-      if (keyCode == RIGHT_ARROW) {
-        image(this.imagenD, this.posXD-=2, this.posYD-=2, 27, 21);
-      }
-    }
+  }
+
+  mover() {
+    this.posXI+=5;
+    this.posYI-=4;
   }
 
   disparar() {
-    this.proyectilDisparadoIzq =true;
-    this.proyectilDisparadoDer =true;
+    this.proyectilDisparado = true;
   }
 }

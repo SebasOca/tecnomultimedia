@@ -27,7 +27,7 @@ class Juego {
         this.enemigos[i]= new Enemigo();
       }
     }
-    this.impacto();
+    //this.impacto();
   }
 
   dibujarFondo() {
@@ -38,17 +38,16 @@ class Juego {
     for (let i=0; i<this.cantEnemigos; i++) {
       this.enemigos[i].dibujar();
     }
-    this.impacto();
   }
 
-  impacto() {
-    for (let i=0; i<this.cantEnemigos; i++) {
-      if (dist (this.torreta.proyectil.posXI, this.torreta.proyectil.posYI, this.enemigos[i].posX, this.enemigos[i].posY) < 50 || dist (this.torreta.proyectil.posXD, this.torreta.proyectil.posYD, this.enemigos[i].posX, this.enemigos[i].posY) < 50) {
-        this.enemigos[i].derribar();
-        this.contador.sumar();
-      }
-    }
-  }
+  //impacto() {
+  //  for (let i=0; i<this.cantEnemigos; i++) {
+  //    if (dist (this.torreta.proyectiles[i].posXI, this.torreta.proyectiles[i].posYI, this.enemigos[i].posX, this.enemigos[i].posY) < 50 || dist (this.torreta.proyectiles[i].posXD, this.torreta.proyectiles[i].posYD, this.enemigos[i].posX, this.enemigos[i].posY) < 50) {
+  //      this.enemigos[i].derribar();
+  //      this.contador.sumar();
+  //    }
+  //  }
+  //}
 
   fin() {
     return this.tiempo.termino();
