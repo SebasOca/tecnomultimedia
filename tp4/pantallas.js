@@ -18,7 +18,7 @@ function pantallas() {
     image(torreC, 360, 320, 40, 23);
     image(torreD, 760, 320, 40, 23);
     
-    if (!bombardeo && posYBom2<490) {
+    if (posYBom2<490) {
       image(ciudad, 80, 487, 81, 22);
     }
     image(domo, 190, 421, 80, 25);

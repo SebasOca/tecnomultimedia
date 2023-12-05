@@ -25,7 +25,7 @@ let proyectilesDerDisparados = [];
 let disparoDer = false;
 
 let cantProyectiles = 100;
-let cantEnemigos = 2;
+let cantEnemigos = 3;
 
 let posESX = [];
 let posESY = [];
@@ -33,7 +33,7 @@ let vidaEnemigos = [];
 
 let enemigoMuerto = false;
 let enemigoMuerto2 = false;
-let bombardeo = true;
+let bombardeo = false;
 let puntos = 0;
 
 
