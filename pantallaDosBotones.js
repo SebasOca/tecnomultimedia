@@ -10,8 +10,8 @@ class PantallaDosBotones {
 
   dibujar() {
     image(this.fondo, 0, 0, 800, 600);
-    text(this.text);
-    this.boton.boton1();
+    this.texto.dibujar();
+    this.boton.dibujar();
     this.boton.boton2();
   }
 

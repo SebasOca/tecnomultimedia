@@ -12,11 +12,11 @@ class Boton {
   dibujar() {
     this.baseFondo();
     this.boton1();
-    this.boton2();
+    //this.boton2();
   }
 
   baseFondo() {
-    stroke(43, 237, 200);
+    stroke(43, 237, 180);
     strokeWeight(3);
     fill (10, 90);
     ellipse (400, 650, 800, 200);
@@ -34,9 +34,9 @@ class Boton {
   }
 
   avanzarHistoria() {
-    if (dist (mouseX, mouseY, posXBS, posYB) < 35) {
+    if (dist (mouseX, mouseY, posXBS+30, posYB+30) < 35) {
       this.botonPresionadoS = true;
-    } else if (dist (mouseX, mouseY, posXBA, posYB) < 35) {
+    } else if (dist (mouseX, mouseY, posXBA+30, posYB+30) < 35) {
       this.botonPresionadoA = true;
     }
   }
