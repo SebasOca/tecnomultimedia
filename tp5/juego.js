@@ -7,7 +7,7 @@ class Juego {
     this.torreta = new Torreta();
 
     this.enemigos = [];
-    this.cantEnemigos = 4;
+    this.cantEnemigos = 6;
     for (let i=0; i<this.cantEnemigos; i++) {
       this.enemigos[i] = new Enemigo();
     }
@@ -23,10 +23,10 @@ class Juego {
 
     this.dibujarEnemigos();
     if (this.fin()) {
-    for (let i=0; i<this.cantEnemigos; i++) {
-      this.enemigos[i]= new Enemigo();
+      for (let i=0; i<this.cantEnemigos; i++) {
+        this.enemigos[i]= new Enemigo();
+      }
     }
-     }
     this.impacto();
   }
 
@@ -42,7 +42,7 @@ class Juego {
 
   impacto() {
     for (let i=0; i<this.cantEnemigos; i++) {
-      if (dist (this.torreta.proyectil.posXI, this.torreta.proyectil.posYI, this.enemigos[i].posX, this.enemigos[i].posY) < 50 || dist (this.torreta.proyectil.posXD, this.torreta.proyectil.posYD, this.enemigos[i].posX, this.enemigos[i].posY) < 50) {
+      if (dist (this.torreta.proyectil.posXI, this.torreta.proyectil.posYI, this.enemigos[i].posX, this.enemigos[i].posY) < 40 || dist (this.torreta.proyectil.posXD, this.torreta.proyectil.posYD, this.enemigos[i].posX, this.enemigos[i].posY) < 40) {
         this.enemigos[i].derribar();
         this.contador.sumar();
       }
@@ -52,4 +52,6 @@ class Juego {
   fin() {
     return this.tiempo.termino();
   }
+  
+  
 }

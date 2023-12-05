@@ -16,7 +16,7 @@ class PantallaInicial {
       textFont(fuente);
       textAlign(CENTER);
       textSize(22);
-      text("Pulsa las flechas Izq. y Der. para disparar\ndesde sus respectivas torres", 400, 520);
+      text("Pulsa las flechas Izq. y Der. para recargardesde sus respectivas\ntorres y cualquier tecla para disparar la recarga", 400, 520);
 
       noStroke();
     } else {

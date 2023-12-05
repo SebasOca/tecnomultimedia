@@ -2,7 +2,7 @@ class Principito {
   constructor() {
     this.posX = -20;
     this.posY = 200;
-    this.velocidad = random(2, 3);
+    this.velocidad = random(3,4);
     this.imagen = navePrincipito;
   }
 
