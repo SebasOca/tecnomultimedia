@@ -48,9 +48,22 @@ function pantallas() {
       image(domo, 190, 421, 80, 25);
       image(puente, 480, 485, 80, 24);
     }
+    if (estructurasDestruidas){
+      background(255, 0, 0, 50);
+      textSize(100);
+      fill (255, 0, 0);
+      text ("PERDISTE", 400, 200);
+    }
 
     enemigos();
     verificarVidaEnemigos();
+    if (enemigoMuerto && enemigoMuerto2){
+      background(0, 255, 0, 50);
+      textSize(100);
+      fill (0, 255, 0);
+      text ("GANASTE", 400, 200);
+    }
+    
     control();
     contador();
   } else if (pantalla == 3) {
