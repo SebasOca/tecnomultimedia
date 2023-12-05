@@ -28,6 +28,9 @@ class Juego {
       }
     }
     this.impacto();
+    if (this.contador.dibujar > 0){
+      this.pantallaGanar();
+    }
   }
 
   dibujarFondo() {
@@ -52,6 +55,18 @@ class Juego {
   fin() {
     return this.tiempo.termino();
   }
+
+  pantallaGanar() {
+    image(this.fondoG, 0, 0, width, height);
+    textSize(100);
+    fill (0, 255, 0);
+    text ("GANASTE", 400, 200);
+  }
   
-  
+  pantallaPerder(){
+    image(this.fondoP, 0, 0, width, height);
+    fill (0, 255, 0);
+    textSize(100);
+    text ("PERDISTE", 400, 200);    
+  }
 }
