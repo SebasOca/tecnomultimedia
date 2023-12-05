@@ -25,7 +25,7 @@ let proyectilesDerDisparados = [];
 let disparoDer = false;
 
 let cantProyectiles = 100;
-let cantEnemigos = 3;
+let cantEnemigos = 4;
 
 let posESX = [];
 let posESY = [];
@@ -35,7 +35,7 @@ let enemigoMuerto = false;
 let enemigoMuerto2 = false;
 let bombardeo = false;
 let puntos = 0;
-
+let estructurasDestruidas = false;
 
 function preload() {
   inicial = loadImage('data/inicial.png');

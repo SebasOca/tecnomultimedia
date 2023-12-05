@@ -9,7 +9,6 @@ function pantallas() {
     image(b2, 150, 450, 100, 39);
     image(b1, 325, 440, 150, 58);
     image(b3, 550, 450, 100, 39);
-    
   } else if (pantalla == 1) {
     //instrucciones
     image(fondo, 0, 0, 800, 600);
@@ -17,7 +16,7 @@ function pantallas() {
     image(torreI, 0, 354, 40, 23);
     image(torreC, 360, 320, 40, 23);
     image(torreD, 760, 320, 40, 23);
-    
+
     if (posYBom2<490) {
       image(ciudad, 80, 487, 81, 22);
     }
@@ -33,7 +32,6 @@ function pantallas() {
     text('Pulsa "arriba" para atacar con el canon central', 400, 310);
     text('Elimina a los invasores antes\n de que destruyan la ciudad', 640, 220);
     text('Cada enemigo abatido da 10 puntos', 380, 570);
-    
   } else if (pantalla == 2) {
     //juego
     image(fondo, 0, 0, 800, 600);
@@ -45,15 +43,16 @@ function pantallas() {
     torres();
 
     //proteger
-    image(ciudad, 80, 487, 81, 22);
-    image(domo, 190, 421, 80, 25);
-    image(puente, 480, 485, 80, 24);
+    if (!estructurasDestruidas) {
+      image(ciudad, 80, 487, 81, 22);
+      image(domo, 190, 421, 80, 25);
+      image(puente, 480, 485, 80, 24);
+    }
 
     enemigos();
     verificarVidaEnemigos();
     control();
     contador();
-    
   } else if (pantalla == 3) {
     //creditos
     image(fondocred, 0, 0, 800, 600);
