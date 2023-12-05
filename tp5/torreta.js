@@ -20,12 +20,19 @@ class Torreta {
 
   controles() {
     if (keyCode == LEFT_ARROW) {
-      this.dispararProyectil();
+      this.dispararProyectilIzq();
+    }
+    if (keyCode == RIGHT_ARROW) {
+      this.dispararProyectilDer();
     }
   }
 
-  dispararProyectil() {
-    //this.proyectil = new Proyectil ();
-    this.proyectil.disparar();
+  dispararProyectilIzq() {
+    this.proyectil = new Proyectil ();
+    this.proyectil.dispararIzq();
+  }
+  dispararProyectilDer() {
+    this.proyectil = new Proyectil ();
+    this.proyectil.dispararDer();
   }
 }
