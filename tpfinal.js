@@ -1,4 +1,3 @@
-//Enlace al video:
 let aventura;
 let bSiguiente, bAlternativa;
 let fondo = [];
@@ -26,10 +25,10 @@ function setup() {
 
 function draw() {
   background (20, 27, 90);
-  this.aventura.dibujar();
+  aventura.dibujar();
   
 }
 
-function click() {
-  this.aventura.click();
+function mouseClicked() {
+  aventura.click();
 }

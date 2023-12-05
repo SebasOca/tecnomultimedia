@@ -1,21 +1,25 @@
-class PantallaDosBotones{
+class PantallaDosBotones {
   //pantallas 2, 6, 9, 14
-  constructor() {
-    this.fondo[i] = fondo[i];
-    this.texto = texto;
-    this.boton1 = new Boton();
-    this.boton2 = new Boton();
+  constructor(fondo, boton, pantallaSig, pantallaAlt, texto) {
+    this.fondo = fondo;
+    this.texto = new Texto();
+    this.pantallaSiguiente = pantallaSig;
+    this.pantallaAlternativa = pantallaAlt;
+    this.boton = new Boton();
   }
-  
-  dibujar(){
-    image(this.fondo[i], 0, 0, 800, 600);
+
+  dibujar() {
+    image(this.fondo, 0, 0, 800, 600);
     text(this.text);
-    this.boton1.dibujar()
-    this.boton2.dibujar()
+    this.boton.boton1();
+    this.boton.boton2();
   }
-  
-  click(){
-    this.boton1.click()
-    this.boton2.click()
-  }  
+
+  click() {
+    if (this.botonPresionadoS) {
+      return this.pantallaSig;
+    } else if (this.botonPresionadoA) {
+      return this.pantallaAlt;
+    }
+  }
 }
