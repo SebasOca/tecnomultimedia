@@ -1,0 +1,100 @@
+body{
+    background-color: rgb(10, 6, 45);
+    background-image: url("img/fondo0.png");
+    font-family: cursive;
+    background-repeat: no-repeat ;
+    background-position-x: center;
+    background-position-y: 50px;
+    background-size: 700px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+header{
+    margin-top: 50px;
+    text-align: center;
+    text-shadow: rgb(0, 37, 150) 0px 2px 10px;
+    font-size: 50px;
+    color:rgb(0, 157, 209);
+}
+
+article{
+    max-width: 60%;
+    margin: 40px auto;
+    padding: 20px 90px;
+    background-color: rgba(0, 0, 0, 0.267);
+    border-radius: 15px;
+    text-align: left;
+    font-weight: normal;
+    color:rgb(196, 218, 225);
+    line-height: 50px;
+}
+
+.centrada{
+    display: inline-block;
+    margin: 10px 100px;
+}
+
+nav{
+    text-align: center;
+}
+
+nav li{ 
+    display: inline-block; 
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+.boton{
+    padding: 15px 30px;
+    background-color: rgba(90, 90, 90, 0.137);
+    color: rgb(175, 214, 214);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: normal;
+    margin: 10px 80px;
+    border-radius: 15px;
+}
+
+.boton:hover{
+    color: rgb(219, 244, 251);
+    font-weight: 800;
+    background-color: rgba(0, 255, 183, 0.6);
+    box-shadow: 0px 0px 6px 0px black inset;
+}
+
+@media (max-width: 600px){
+    body{
+        background-position-y: 70px;
+        background-size: 300px;
+    }
+
+    header{
+        font-size: 30px;
+        margin-top: 30px;
+    }
+
+    article{
+        max-width: 90%;
+        margin: 40px auto;
+        padding: 20px 20px;
+        font-size: 14px;
+    }
+
+    .centrada{
+        display: inline-block;
+        margin: auto auto;
+    }
+
+    nav li{
+        margin-top: 10px;
+        font-size: 16px;
+    }
+
+    .boton{
+        padding: 10px 13px;
+        margin: 4px;
+    }
+}
